@@ -32,26 +32,98 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Schema.org JSON-LD -->
+  <!-- Schema.org JSON-LD LocalBusiness & FAQPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Aqiqah Dombastis",
-    "image": "https://aqiqahdombastis.com/assets/img/logo-dombastis.webp",
-    "telephone": "+6282381052469",
-    "url": "https://aqiqahdombastis.com",
-    "priceRange": "$$",
-    "description": "Layanan penyedia domba dan catering aqiqah syar'i, higienis, lezat tanpa bau prengus dengan pengiriman tepat waktu.",
-    "areaServed": "Indonesia",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-      ],
-      "opens": "07:30",
-      "closes": "21:00"
-    }
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://aqiqahdombastis.com/#localbusiness",
+        "name": "Aqiqah Dombastis",
+        "url": "https://aqiqahdombastis.com/",
+        "logo": "https://aqiqahdombastis.com/assets/img/logo-dombastis.webp",
+        "image": [
+          "https://aqiqahdombastis.com/assets/img/hero-aqiqah.webp",
+          "https://aqiqahdombastis.com/assets/img/paket-nasi-box.webp",
+          "https://aqiqahdombastis.com/assets/img/olahan-sate-kambing.webp"
+        ],
+        "telephone": "+6282381052469",
+        "priceRange": "Rp 1.450.000 - Rp 4.500.000",
+        "description": "Layanan penyedia domba dan catering aqiqah syar'i, higienis, lezat tanpa bau prengus dengan pengiriman tepat waktu.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Layanan Aqiqah Dombastis No. 12",
+          "addressLocality": "Jakarta Selatan",
+          "addressRegion": "DKI Jakarta",
+          "postalCode": "12560",
+          "addressCountry": "ID"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -6.2088,
+          "longitude": 106.8456
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "07:30",
+            "closes": "21:00"
+          }
+        ],
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Jabodetabek dan Sekitarnya"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://aqiqahdombastis.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Bagaimana cara memesan paket aqiqah di Aqiqah Dombastis?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pemesanan sangat mudah! Cukup klik tombol 'Pesan via WhatsApp' atau hubungi nomor resmi kami di 0823-8105-2469. Tim kami akan memandu pemilihan paket, pencatatan nama anak/orang tua, penentuan tanggal tasyakuran, dan alamat pengiriman."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Berapa hari sebelum acara pemesanan sebaiknya dilakukan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kami menyarankan pemesanan dilakukan H-3 sampai H-7 sebelum hari pelaksanaan agar kami dapat menyiapkan hewan terbaik dan jadwal dapur secara maksimal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bolehkah aqiqah anak laki-laki hanya menggunakan 1 ekor domba?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Berdasarkan sunnah Rasulullah SAW, afdholnya anak laki-laki adalah 2 ekor domba/kambing. Namun jika orang tua memiliki keterbatasan biaya, diperbolehkan menunaikan 1 ekor terlebih dahulu dan aqiqahnya tetap sah serta berpahala."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Apakah shohibul aqiqah boleh menyaksikan proses penyembelihan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tentu sangat diperbolehkan! Anda dipersilakan datang langsung ke lokasi kandang pemotongan kami, atau melalui layanan Live Video Call serta rekaman video & foto pemotongan lengkap."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
