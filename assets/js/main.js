@@ -279,4 +279,24 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 300);
     }, 3500);
   }
+
+  // 8. SCROLL TO TOP BUTTON (ABOVE FLOATING WHATSAPP)
+  const btnScrollTop = document.getElementById('btnScrollTop');
+  if (btnScrollTop) {
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 300) {
+        btnScrollTop.classList.add('show');
+      } else {
+        btnScrollTop.classList.remove('show');
+      }
+    });
+
+    btnScrollTop.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 });
